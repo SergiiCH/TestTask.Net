@@ -1,0 +1,30 @@
+Introduction
+The provided sample simulates scenario of having encapsulated generic service 
+- "DataRetrievalService" for data retrieval.
+Implemented scenario retrieves data from the file FileBasedRetrieverDA based 
+on defined IDataRetrieverDA interface.
+==============================================================================
+ 
+1) Decorator     
+Your task is to implement an "Decorator pattern" for class FileBasedRetrieverDA. 
+The "DataRetrievalResult" must be cached for second call (only single IO access 
+for same "key" is allowed!)
+  
+ Test definition in BDD form is following: 
+ 
+ GIVEN THAT DataRetrievalService.GetMyData("DataFile1") is called in time t1
+ AND DataRetrievalService.GetMyData("DataFile1") is called in time t2
+ THEN DataRetrievalResult(t1).RetrievedOn must be same as 
+ DataRetrievalResult(t2).RetrievedOn
+ 
+
+Add new additional test in "DataRetrievalServiceTest" before implementing a
+new Decorator class.
+
+==============================================================================
+2) Demonstrate import of any XML data to object (defined by you)
+- Use System.Xml.Serialization.XmlSerializer class 
+- create and use XSD for XML validation
+- make example of importing well-formed and non-well formed (invalid) XML.
+
+
